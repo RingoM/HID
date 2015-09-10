@@ -35,7 +35,9 @@ THE SOFTWARE.
 // Consumer
 //================================================================================
 
-#include "HID-Project.h"
+#ifndef HID_REPORTID_CONSUMERCONTROL
+#define HID_REPORTID_CONSUMERCONTROL 4
+#endif
 
 // Media key definitions, see official USB docs for more
 #define MEDIA_FAST_FORWARD	0xB3
@@ -94,6 +96,8 @@ typedef union {
 		uint16_t key4;
 	};
 } HID_ConsumerControlReport_Data_t;
+
+extern HID_ HID;
 
 class Consumer_ {
 public:

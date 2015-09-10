@@ -35,7 +35,9 @@ THE SOFTWARE.
 // System
 //================================================================================
 
-#include "HID-Project.h"
+#ifndef HID_REPORTID_SYSTEMCONTROL
+#define HID_REPORTID_SYSTEMCONTROL 5
+#endif
 
 #define SYSTEM_POWER_DOWN	0x81
 #define SYSTEM_SLEEP	0x82
@@ -64,6 +66,8 @@ typedef union{
 	uint8_t whole8[];
 	uint8_t key;
 } HID_SystemControlReport_Data_t;
+
+extern HID_ HID;
 
 class System_{
 public:

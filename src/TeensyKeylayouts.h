@@ -47,7 +47,7 @@ extern "C"{
 //#define LAYOUT_FRENCH
 //#define LAYOUT_FRENCH_BELGIAN
 //#define LAYOUT_FRENCH_SWISS
-//#define LAYOUT_GERMAN
+#define LAYOUT_GERMAN
 //#define LAYOUT_GERMAN_MAC
 //#define LAYOUT_GERMAN_SWISS
 //#define LAYOUT_ICELANDIC
@@ -60,8 +60,10 @@ extern "C"{
 //#define LAYOUT_SPANISH_LATIN_AMERICA
 //#define LAYOUT_SWEDISH
 //#define LAYOUT_TURKISH
-//#define LAYOUT_UNITED_KINGDOM
+//#define LAYOUT_UNITED_KINGDOM	
 //#define LAYOUT_US_INTERNATIONAL
+
+
 
 // http://en.wikipedia.org/wiki/Keyboard_layout
 

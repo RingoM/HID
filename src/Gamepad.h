@@ -35,7 +35,9 @@ THE SOFTWARE.
 // Gamepad
 //================================================================================
 
-#include "HID-Project.h"
+#ifndef HID_REPORTID_GAMEPAD
+#define HID_REPORTID_GAMEPAD 6
+#endif
 
 // Dpad directions
 #define GAMEPAD_DPAD_CENTERED 0
@@ -153,6 +155,8 @@ typedef union {
 		uint8_t	dPad2 : 4;
 	};
 } HID_GamepadReport_Data_t;
+
+extern HID_ HID;
 
 class Gamepad_{
 public:

@@ -33,88 +33,12 @@ THE SOFTWARE.
 #error "This is not an USB AVR or you use an old version of the IDE."
 #endif
 
-//#define LAYOUT_US_ENGLISH
-//#define LAYOUT_CANADIAN_FRENCH
-//#define LAYOUT_CANADIAN_MULTILINGUAL
-//#define LAYOUT_DANISH
-//#define LAYOUT_FINNISH
-//#define LAYOUT_FRENCH
-//#define LAYOUT_FRENCH_BELGIAN
-//#define LAYOUT_FRENCH_SWISS
-//#define LAYOUT_GERMAN
-//#define LAYOUT_GERMAN_MAC
-//#define LAYOUT_GERMAN_SWISS
-//#define LAYOUT_ICELANDIC
-//#define LAYOUT_IRISH
-//#define LAYOUT_ITALIAN
-//#define LAYOUT_NORWEGIAN
-//#define LAYOUT_PORTUGUESE
-//#define LAYOUT_PORTUGUESE_BRAZILIAN
-//#define LAYOUT_SPANISH
-//#define LAYOUT_SPANISH_LATIN_AMERICA
-//#define LAYOUT_SWEDISH
-//#define LAYOUT_TURKISH
-//#define LAYOUT_UNITED_KINGDOM
-//#define LAYOUT_US_INTERNATIONAL
-
-// Default US keyboard layout
-#if !defined(LAYOUT_CANADIAN_FRENCH) && !defined(LAYOUT_CANADIAN_MULTILINGUAL) \
-&& !defined(LAYOUT_DANISH) && !defined(LAYOUT_FINNISH) && !defined(LAYOUT_FRENCH) \
-&& !defined(LAYOUT_FRENCH_BELGIAN) && !defined(LAYOUT_FRENCH_SWISS) && !defined(LAYOUT_GERMAN) \
-&& !defined(LAYOUT_GERMAN_MAC) && !defined(LAYOUT_GERMAN_SWISS) && !defined(LAYOUT_ICELANDIC) \
-&& !defined(LAYOUT_IRISH) && !defined(LAYOUT_ITALIAN) && !defined(LAYOUT_NORWEGIAN) \
-&& !defined(LAYOUT_PORTUGUESE) && !defined(LAYOUT_PORTUGUESE_BRAZILIAN) \
-&& !defined(LAYOUT_SPANISH) && !defined(LAYOUT_SPANISH_LATIN_AMERICA) \
-&& !defined(LAYOUT_SWEDISH) && !defined(LAYOUT_TURKISH) && !defined(LAYOUT_UNITED_KINGDOM) \
-&& !defined(LAYOUT_US_INTERNATIONAL) && !defined(LAYOUT_US_ENGLISH)
-#define LAYOUT_US_ENGLISH
-#endif
-
-#ifndef HID_REPORTID_MOUSE
-#define HID_REPORTID_MOUSE 1
-#endif
-
-#ifndef HID_REPORTID_KEYBOARD
-#define HID_REPORTID_KEYBOARD 2
-#endif
-
-#ifndef HID_REPORTID_CONSUMERCONTROL
-#define HID_REPORTID_CONSUMERCONTROL 4
-#endif
-
-#ifndef HID_REPORTID_SYSTEMCONTROL
-#define HID_REPORTID_SYSTEMCONTROL 5
-#endif
-
-#ifndef HID_REPORTID_GAMEPAD
-#define HID_REPORTID_GAMEPAD 6
-#endif
-
-#ifndef HID_REPORTID_MOUSE_ABSOLUTE
-#define HID_REPORTID_MOUSE_ABSOLUTE 7
-#endif
-
-#ifndef HID_REPORTID_NKRO_KEYBOARD
-#define HID_REPORTID_NKRO_KEYBOARD 8
-#endif
-
-#ifndef HID_REPORTID_TEENSY_KEYBOARD
-#define HID_REPORTID_TEENSY_KEYBOARD 9
-#endif
-
-extern HID_ HID;
-
-#include "HID-Tables.h"
-
 // Include all HID libraries (.a linkage required to work) properly
-#include "ImprovedKeylayouts.h"
-#include "ImprovedKeyboard.h"
+//#include "ImprovedKeyboard.h"
 #include "AbsoluteMouse.h"
 #include "Consumer.h"
 #include "Gamepad.h"
 #include "System.h"
 
 // Include Teensy HID afterwards to overwrite key definitions if used
-#ifdef USE_TEENSY_KEYBOARD
 #include "TeensyKeyboard.h"
-#endif

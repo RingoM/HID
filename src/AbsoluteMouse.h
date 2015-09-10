@@ -35,7 +35,9 @@ THE SOFTWARE.
 //================================================================================
 //	Mouse
 
-#include "HID-Project.h"
+#ifndef HID_REPORTID_MOUSE_ABSOLUTE
+#define HID_REPORTID_MOUSE_ABSOLUTE 7
+#endif
 
 #define MOUSE_LEFT		(1 << 0)
 #define MOUSE_RIGHT		(1 << 1)
@@ -97,6 +99,8 @@ typedef union{
 		int8_t wheel;
 	};
 } HID_MouseAbsoluteReport_Data_t;
+
+extern HID_ HID;
 
 class AbsMouse_
 {
